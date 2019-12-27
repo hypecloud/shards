@@ -6,7 +6,7 @@ const PORT = 1337
 import typeDefs from './data/typeDefs'
 import resolvers from './data/resolvers'
 
-const server = new ApolloServer({ typeDefs, resolvers })
+const server = new ApolloServer({ typeDefs, resolvers: resolvers() })
 const app = new Koa()
 server.applyMiddleware({ app })
 app.listen(PORT)

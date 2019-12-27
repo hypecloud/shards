@@ -1,45 +1,36 @@
 import dayjs from 'dayjs'
 import { MongoClient, ObjectId } from 'mongodb'
-import { generateCollections } from '../lib/resolvers'
+import { getCollections } from '../lib/db'
+import { generateCollections, generateQueries } from '../lib/resolvers'
 import shardsConfig from '../shards.config'
 
 const models = shardsConfig.models
 
-const MONGO_URL = 'mongodb://localhost:27017/'
+const collections = getCollections(models)
+console.log(collections)
 
-let collections
-
-MongoClient.connect(MONGO_URL, (err, client) => {
-  const db = client.db('shards')
-  collections = generateCollections(models, db)
-})
-
-const resolvers = {
-  Query: {
-    getRealms() {
-      return collections.realms.find().toArray()
-    },
-    async getRealm(_, { id }) {
-      const record = await collections.realms.findOne(ObjectId(id))
-      const createdAt = ObjectId(record._id).getTimestamp()
-      return {
-        ...record,
-        createdAt
+const resolvers = () => {
+  return {
+    Query: generateQueries(models, collections),
+    Mutation: {
+      async createRealm(_, args) {
+        args.updatedAt = dayjs().toISOString()
+        const { ops: [first] } = await collections.realms.insertOne(args)
+        return first
+      },
+      async updateRealm(_, { id, ...updateParams }) {
+        updateParams.updatedAt = dayjs().toISOString()
+        const { value } = await collections.realms.findOneAndUpdate(
+          { _id: ObjectId(id) },
+          { $set: updateParams },
+          { returnOriginal: false }
+        )
+        return value
       }
-    }
-  },
-  Mutation: {
-    async createRealm(_, args) {
-      args.updatedAt = dayjs().toISOString()
-      const { ops: [first] } = await collections.realms.insertOne(args)
-      return first
-    },
-    async updateRealm(_, { id, ...args }) {
-      args.updatedAt = dayjs().toISOString()
-      const { ops: [first] } = await collections.realms.updateOne({ _id: id }, { $set: args })
-      return first
     }
   }
 }
+
+console.log('res', resolvers())
 
 export default resolvers

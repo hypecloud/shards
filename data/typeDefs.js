@@ -1,4 +1,3 @@
-import { gql } from 'apollo-server-koa'
 import { defineTypes, defineQueries, defineMutations } from '../lib/typedef'
 import shardsConfig from '../shards.config'
 
