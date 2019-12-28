@@ -1,6 +1,8 @@
 # Shards
 
-GraphQL API scaffolding made simple
+Proof of Concept. It's not production-ready.
+
+GraphQL API scaffolding made simple.
 
 ## Prerequisites
 
