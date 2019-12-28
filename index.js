@@ -1,7 +1,7 @@
 import Koa from 'koa'
 import { ApolloServer } from 'apollo-server-koa'
 
-const PORT = 1337
+const PORT = process.env.PORT || 1337
 
 import typeDefs from './data/typeDefs'
 import resolvers from './data/resolvers'
