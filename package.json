@@ -23,7 +23,7 @@
     "test:unit": "node_modules/.bin/jest"
   },
   "devDependencies": {
-    "babel-eslint": "8",
+    "babel-eslint": "10",
     "eslint": "6.x",
     "jest": "^24.9.0",
     "nodemon": "^2.0.2",
