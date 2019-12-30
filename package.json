@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "babel-eslint": "8",
-    "eslint": "4.x",
+    "eslint": "6.x",
     "jest": "^24.9.0",
     "nodemon": "^2.0.2",
     "prettier": "1.19.1"
