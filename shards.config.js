@@ -4,7 +4,7 @@ export default {
       name: {
         type: 'String',
         defaultValue: 'IDK',
-        validation: value => value.length > 0
+        validation: value => value.length > 3
       },
       slug: 'String!',
       posts: '[Post]'
