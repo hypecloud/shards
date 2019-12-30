@@ -9,6 +9,6 @@ const typeDefs = String([
   defineMutations(models)
 ].join(''))
 
-console.log(typeDefs)
+console.info('>>> API Schema \n', typeDefs)
 
 export default typeDefs
