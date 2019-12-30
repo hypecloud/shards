@@ -1,5 +1,7 @@
 # Shards
 
+[![CircleCI](https://circleci.com/gh/mrcnk/shards.svg?style=svg)](https://circleci.com/gh/mrcnk/shards)
+
 Proof of Concept. It's not production-ready.
 
 GraphQL API scaffolding made simple.
