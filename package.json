@@ -29,7 +29,7 @@
     "nodemon": "^2.0.2",
     "prettier": "1.19.1"
   },
-  "description": "[![CircleCI](https://circleci.com/gh/hypecloud/shards.svg?style=svg)](https://circleci.com/gh/mrcnk/shards)",
+  "description": "[![CircleCI](https://circleci.com/gh/hypecloud/shards.svg?style=svg)](https://circleci.com/gh/hypecloud/shards)",
   "directories": {
     "lib": "lib"
   },
