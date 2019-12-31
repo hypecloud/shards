@@ -1,6 +1,7 @@
 # Shards
 
 [![CircleCI](https://circleci.com/gh/mrcnk/shards.svg?style=svg)](https://circleci.com/gh/mrcnk/shards)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c79fd4d789b7d3dca6b3/maintainability)](https://codeclimate.com/github/hypecloud/shards/maintainability)
 
 Proof of Concept. It's not production-ready.
 

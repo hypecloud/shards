@@ -1,5 +1,5 @@
 {
-  "name": "shards",
+  "name": "@hypecloud/shards",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -17,10 +17,10 @@
   },
   "scripts": {
     "start": "node --require @babel/register index.js",
-    "dev": "node_modules/.bin/nodemon --exec 'node --require @babel/register index.js'",
+    "dev": "nodemon --exec 'node --require @babel/register index.js'",
     "prettier": "prettier --write .",
-    "lint": "node_modules/.bin/eslint .",
-    "test:unit": "node_modules/.bin/jest"
+    "lint": "eslint .",
+    "test:unit": "jest"
   },
   "devDependencies": {
     "babel-eslint": "10",
@@ -28,5 +28,18 @@
     "jest": "^24.9.0",
     "nodemon": "^2.0.2",
     "prettier": "1.19.1"
-  }
+  },
+  "description": "[![CircleCI](https://circleci.com/gh/hypecloud/shards.svg?style=svg)](https://circleci.com/gh/mrcnk/shards)",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypecloud/shards.git"
+  },
+  "author": "Tomek Marciniak <tmarciniakm@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/hypecloud/shards/issues"
+  },
+  "homepage": "https://github.com/hypecloud/shards#readme"
 }
