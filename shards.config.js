@@ -6,7 +6,10 @@ export default {
         defaultValue: 'IDK',
         validation: value => value.length > 3
       },
-      slug: 'String!',
+      slug: {
+        type: 'String!',
+        validation: value => value.length > 3
+      },
       posts: '[Post]'
     },
     post: {
