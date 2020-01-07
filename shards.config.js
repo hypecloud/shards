@@ -1,4 +1,11 @@
-export default {
+let customConfig
+try {
+  customConfig =  require('../../../shards.config.js')
+} catch {
+  console.warn('[WARNING] No shards.config.js found. Using example config.')
+}
+
+const exampleConfig = {
   models: {
     realm: {
       name: {
@@ -18,3 +25,7 @@ export default {
     }
   }
 }
+
+const config = customConfig ? customConfig : exampleConfig
+
+export default config

@@ -8,6 +8,7 @@
     "@babel/preset-env": "^7.7.7",
     "@babel/register": "^7.7.7",
     "apollo-server-koa": "^2.9.14",
+    "app-root-path": "^3.0.0",
     "dayjs": "^1.8.18",
     "koa": "^2.11.0",
     "koa-logger": "^3.2.1",
