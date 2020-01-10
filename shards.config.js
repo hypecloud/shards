@@ -28,6 +28,4 @@ const exampleConfig = {
 
 const config = customConfig ? customConfig.default : exampleConfig
 
-console.log('conf', config)
-
 export default config
