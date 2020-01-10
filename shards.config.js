@@ -26,9 +26,7 @@ const exampleConfig = {
   }
 }
 
-console.log('cc', customConfig)
-
-const config = customConfig ? customConfig : exampleConfig
+const config = customConfig ? customConfig.default : exampleConfig
 
 console.log('conf', config)
 
