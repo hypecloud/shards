@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "node --require @babel/register index.js",
-    "dev": "nodemon --exec 'node --require @babel/register index.js'",
+    "develop": "nodemon --exec 'node --require @babel/register index.js'",
     "prettier": "prettier --write .",
     "lint": "eslint .",
     "test:unit": "jest"

@@ -16,9 +16,9 @@ GraphQL API scaffolding made simple.
 ## Installation
 
 ```
-$ yarn
-$ yarn dev # development mode
-$ yarn start # server mode
+$ yarn # or npm i
+$ yarn develop # or npm run develop - development mode
+$ yarn start # or npm run start - server mode
 ```
 
 ## Usage
